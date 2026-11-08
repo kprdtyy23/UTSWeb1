@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking Pesanan | Literasi Yuk!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html">
+        <img src="images/logo.svg" alt="Logo Literasi Yuk!">
+        <span>Literasi Yuk!</span>
+      </a>
+
+      <div class="side-label">MENU UTAMA</div>
+      <nav class="side-nav">
+        <a href="dashboard.html"><span class="nav-icon">▦</span>Dashboard</a>
+        <a href="stok.html"><span class="nav-icon">▤</span>Katalog & Stok</a>
+        <a href="checkout.html"><span class="nav-icon">🛒</span>Checkout</a>
+        <a class="active" href="tracking.html"><span class="nav-icon">◎</span>Tracking Pesanan</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="nav-logout" id="logoutLink">
+          <span class="nav-icon">↪</span>Keluar
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">STATUS TRANSAKSI</span>
+          <h1>Tracking Pesanan</h1>
+        </div>
+        <div class="profile-chip">
+          <div class="avatar" id="avatarInitial">A</div>
+          <div>
+            <strong id="namaPengguna">Pengguna</strong>
+            <small id="emailPengguna">Email</small>
+          </div>
+        </div>
+      </header>
+
+      <section class="page-intro">
+        <div>
+          <h2>Pantau pesananmu</h2>
+          <p>Semua pesanan yang dibuat melalui halaman checkout akan tampil di sini.</p>
+        </div>
+      </section>
+
+      <section class="panel tracking-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">RIWAYAT</span>
+            <h3>Daftar pesanan</h3>
+          </div>
+          <span class="table-hint">Pembaruan status simulasi</span>
+        </div>
+
+        <div id="detailPesanan"></div>
+
+        <div id="pesananKosong" class="empty-state">
+          <div class="empty-icon">◎</div>
+          <h3>Belum ada pesanan</h3>
+          <p>Pesanan yang kamu buat akan muncul di halaman ini.</p>
+          <a href="checkout.html" class="btn btn-primary">Buat pesanan</a>
+        </div>
+      </section>
+
+      <footer class="footer-note">
+        © 2026 Literasi Yuk! — Buka Buku, Buka Dunia.
+      </footer>
+    </main>
+  </div>
+
+  <!-- Urutan script harus seperti ini -->
+  <script src="js/data.js"></script>
+    <script src="js/toast.js"></script>
+  <script src="js/tracking.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

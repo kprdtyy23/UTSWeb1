@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Literasi Yuk!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html">
+                <img src="images/logo.svg" alt="">
+                <span>Literasi Yuk!</span>
+            </a>
+
+            <div class="side-label">MENU UTAMA</div>
+
+            <nav class="side-nav">
+                <a href="dashboard.html">
+                    <span class="nav-icon">▦</span>
+                    Dashboard
+                </a>
+
+                <a href="stok.html">
+                    <span class="nav-icon">▤</span>
+                    Katalog & Stok
+                </a>
+
+                <a class="active" href="checkout.html">
+                    <span class="nav-icon">🛒</span>
+                    Checkout
+                </a>
+
+                <a href="tracking.html">
+                    <span class="nav-icon">◎</span>
+                    Tracking Pesanan
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button class="nav-logout" id="logoutLink">
+                    <span class="nav-icon">↪</span>
+                    Keluar
+                </button>
+            </div>
+        </aside>
+
+        <!-- Konten utama -->
+        <main class="main-area">
+
+            <!-- Header -->
+            <header class="topbar">
+                <div>
+                    <span class="eyebrow">TRANSAKSI</span>
+                    <h1>Checkout</h1>
+                </div>
+
+                <div class="profile-chip">
+                    <div class="avatar" id="avatarInitial">A</div>
+
+                    <div>
+                        <strong id="namaPengguna">Pengguna</strong>
+                        <small id="emailPengguna">Email</small>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Pengantar halaman -->
+            <section class="page-intro">
+                <div>
+                    <h2>Buat pesanan baru</h2>
+                    <p>
+                        Masukkan data pelanggan dan pilih buku
+                        yang ingin dibeli.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Form checkout -->
+            <div class="checkout-grid">
+
+                <section class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">DATA PELANGGAN</span>
+                            <h3>Informasi pembeli</h3>
+                        </div>
+                    </div>
+
+                    <form id="formCheckout" class="form-stack">
+
+                        <label for="namaPembeli">Nama pembeli</label>
+                        <input
+                            id="namaPembeli"
+                            type="text"
+                            placeholder="Nama lengkap pembeli"
+                            required
+                        >
+
+                        <label for="emailPembeli">Email pembeli</label>
+                        <input
+                            id="emailPembeli"
+                            type="email"
+                            placeholder="nama@email.com"
+                            required
+                        >
+
+                        <label for="alamatPembeli">Alamat pengiriman</label>
+                        <textarea
+                            id="alamatPembeli"
+                            rows="3"
+                            placeholder="Alamat lengkap"
+                            required
+                        ></textarea>
+
+                        <div class="form-row">
+
+                            <div>
+                                <label for="pilihBuku">Pilih buku</label>
+
+                                <select id="pilihBuku" required>
+                                    <option value="">Pilih buku</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="jumlahBuku">Jumlah</label>
+
+                                <input
+                                    id="jumlahBuku"
+                                    type="number"
+                                    min="1"
+                                    value="1"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="btnTambah"
+                        >
+                            + Tambah ke keranjang
+                        </button>
+
+                        <!-- Keranjang pesanan -->
+                        <div class="cart-area">
+                            <h4>Keranjang pesanan</h4>
+
+                            <div id="daftarKeranjang" class="cart-list">
+                                <p class="muted">
+                                    Belum ada buku di keranjang.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Total pembayaran -->
+                        <div class="total-row">
+                            <span>Total pembayaran</span>
+                            <strong id="totalPembayaran">Rp0</strong>
+                        </div>
+
+                        <button
+                            class="btn btn-primary btn-full"
+                            type="submit"
+                        >
+                            Buat pesanan
+                        </button>
+
+                    </form>
+                </section>
+
+                <!-- Informasi tambahan -->
+                <aside class="panel order-aside">
+
+                    <div class="aside-illustration">
+                        <img src="images/logo.svg" alt="">
+                    </div>
+
+                    <h3>Belanja buku jadi mudah</h3>
+
+                    <p>
+                        Pilih buku favorit, masukkan ke keranjang,
+                        lalu simpan pesanan untuk melihat statusnya
+                        di halaman tracking.
+                    </p>
+
+                    <div class="notice">
+                        Pesanan tersimpan di browser ini menggunakan
+                        localStorage. Data ini untuk simulasi pembelajaran.
+                    </div>
+
+                </aside>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer-note">
+                © 2026 Literasi Yuk! — Buka Buku, Buka Dunia.
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

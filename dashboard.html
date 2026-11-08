@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Literasi Yuk!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><img src="images/logo.svg" alt=""><span>Literasi Yuk!</span></a>
+      <div class="side-label">MENU UTAMA</div>
+      <nav class="side-nav">
+        <a class="active" href="dashboard.html"><span class="nav-icon">▦</span>Dashboard</a>
+        <a href="stok.html"><span class="nav-icon">▤</span>Katalog & Stok</a>
+        <a href="checkout.html"><span class="nav-icon">🛒</span>Checkout</a>
+        <a href="tracking.html"><span class="nav-icon">◎</span>Tracking Pesanan</a>
+      </nav>
+      <div class="sidebar-bottom"><button class="nav-logout" id="logoutLink"><span class="nav-icon">↪</span>Keluar</button></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div><span class="eyebrow">RUANG KERJA</span><h1>Dashboard</h1></div>
+        <div class="profile-chip"><div class="avatar" id="avatarInitial">A</div><div><strong id="namaPengguna">Pengguna</strong><small id="emailPengguna">Email</small></div></div>
+      </header>
+
+      <section class="welcome-card">
+        <div><span class="eyebrow">LITERASI YUK!</span><h2 id="sapaanNama">Halo, Pengguna!</h2><p id="greeting">Selamat datang kembali. Yuk, kelola toko bukumu hari ini.</p></div>
+        <div class="welcome-mark"><img src="images/logo.svg" alt=""></div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card"><div class="stat-symbol purple">▤</div><span>Total Judul Buku</span><strong id="totalJudul">5</strong><small>Koleksi dalam katalog</small></article>
+        <article class="stat-card"><div class="stat-symbol blue">▣</div><span>Total Stok Buku</span><strong id="totalStok">38</strong><small>Jumlah seluruh persediaan</small></article>
+        <article class="stat-card"><div class="stat-symbol orange">Rp</div><span>Nilai Persediaan</span><strong id="nilaiStok">Rp0</strong><small>Perkiraan nilai stok</small></article>
+        <article class="stat-card"><div class="stat-symbol green">!</div><span>Buku Stok Habis</span><strong id="stokHabis">0</strong><small>Perlu dilakukan restok</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <div class="panel-heading"><div><span class="eyebrow">KOLEKSI</span><h3>Buku pilihan</h3></div><a class="inline-link" href="stok.html">Lihat katalog →</a></div>
+          <div class="featured-books" id="featuredBooks"></div>
+        </article>
+        <article class="panel quick-panel">
+          <span class="eyebrow">AKSES CEPAT</span><h3>Mau melakukan apa?</h3>
+          <a class="quick-link" href="stok.html"><span>▤</span><div><strong>Kelola katalog</strong><small>Tambah dan atur stok buku</small></div><b>→</b></a>
+          <a class="quick-link" href="checkout.html"><span>＋</span><div><strong>Buat pesanan</strong><small>Catat pembelian pelanggan</small></div><b>→</b></a>
+          <a class="quick-link" href="tracking.html"><span>◎</span><div><strong>Lacak pesanan</strong><small>Lihat status pesanan</small></div><b>→</b></a>
+        </article>
+      </section>
+      <footer class="footer-note">© 2026 Literasi Yuk! — Buka Buku, Buka Dunia.</footer>
+    </main>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/toast.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

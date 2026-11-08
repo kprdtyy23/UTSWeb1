@@ -1,0 +1,119 @@
+/* Notifikasi custom Literasi Yuk! */
+
+.toast-container {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: min(420px, calc(100% - 30px));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.custom-toast {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 18px;
+  background: #ffffff;
+  border: 1px solid #e9eaf1;
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(36, 39, 73, 0.16);
+  opacity: 0;
+  transform: translateY(-18px) scale(0.96);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.custom-toast.toast-show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.custom-toast.toast-hide {
+  opacity: 0;
+  transform: translateY(-12px) scale(0.97);
+}
+
+.toast-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 23px;
+  font-weight: 700;
+  animation: toast-pop 0.45s ease both;
+}
+
+.toast-content {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.toast-content strong {
+  color: #20243a;
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+}
+
+.toast-content span {
+  color: #7d8297;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.toast-success .toast-icon {
+  color: #15966a;
+  background: #e8f8f1;
+  border: 2px solid #15966a;
+}
+
+.toast-error .toast-icon {
+  color: #d34f4f;
+  background: #fff0f0;
+  border: 2px solid #d34f4f;
+}
+
+.toast-warning .toast-icon {
+  color: #c78325;
+  background: #fff5e5;
+  border: 2px solid #c78325;
+}
+
+.toast-info .toast-icon {
+  color: #6757d9;
+  background: #efedff;
+  border: 2px solid #6757d9;
+}
+
+@keyframes toast-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.45) rotate(-25deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.12) rotate(5deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .toast-container {
+    top: 14px;
+  }
+
+  .custom-toast {
+    padding: 12px 14px;
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Literasi Yuk!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-visual">
+      <div class="brand brand-light">
+        <img src="images/logo.svg" alt="Logo Literasi Yuk!">
+        <span>Literasi Yuk!</span>
+      </div>
+      <div class="visual-copy">
+        <span class="eyebrow">TOKO BUKU ONLINE</span>
+        <h1>Buka Buku,<br><em>Buka Dunia.</em></h1>
+        <p>Temukan cerita, pengetahuan, dan inspirasi baru dari setiap halaman.</p>
+      </div>
+      <div class="book-stack" aria-hidden="true">
+        <div class="stack-book stack-one"></div>
+        <div class="stack-book stack-two"></div>
+        <div class="stack-book stack-three"></div>
+      </div>
+      <span class="visual-note">Temukan bacaan favoritmu hari ini.</span>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="brand brand-mobile">
+          <img src="images/logo.svg" alt="Logo Literasi Yuk!">
+          <span>Literasi Yuk!</span>
+        </div>
+        <span class="eyebrow">SELAMAT DATANG</span>
+        <h2>Masuk ke akunmu</h2>
+        <p class="muted">Masukkan email dan password untuk melanjutkan.</p>
+
+        <form id="loginForm" class="form-stack">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="nama@email.com" required>
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="password" placeholder="Masukkan password" required>
+            <button type="button" class="password-toggle" id="togglePassword" aria-label="Tampilkan password">Lihat</button>
+          </div>
+          <div class="form-between">
+            <button type="button" class="text-button" id="forgotOpen">Lupa password?</button>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Masuk</button>
+        </form>
+
+        <div class="auth-divider"><span>atau</span></div>
+        <p class="auth-switch">Belum punya akun? <button type="button" class="text-button" id="registerOpen">Daftar sekarang</button></p>
+        <div class="demo-info">
+          <strong>Akun demo</strong>
+          <span>Email: admin@literasiyuk.com</span>
+          <span>Password: buku123</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="registerModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close="registerModal">×</button>
+      <span class="eyebrow">BUAT AKUN</span>
+      <h2>Daftar Literasi Yuk!</h2>
+      <form id="registerForm" class="form-stack">
+        <label for="registerName">Nama lengkap</label>
+        <input id="registerName" type="text" placeholder="Nama kamu" required>
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" type="email" placeholder="nama@email.com" required>
+        <label for="registerPassword">Password</label>
+        <input id="registerPassword" type="password" minlength="6" placeholder="Minimal 6 karakter" required>
+        <button class="btn btn-primary btn-full" type="submit">Buat akun</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="forgotModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close="forgotModal">×</button>
+      <span class="eyebrow">RESET PASSWORD</span>
+      <h2>Atur password baru</h2>
+      <form id="forgotForm" class="form-stack">
+        <label for="forgotEmail">Email terdaftar</label>
+        <input id="forgotEmail" type="email" placeholder="nama@email.com" required>
+        <label for="newPassword">Password baru</label>
+        <input id="newPassword" type="password" minlength="6" placeholder="Minimal 6 karakter" required>
+        <button class="btn btn-primary btn-full" type="submit">Simpan password</button>
+      </form>
+    </div>
+  </div>
+  <script src="js/toast.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

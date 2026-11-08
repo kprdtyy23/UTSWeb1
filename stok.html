@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog & Stok | Literasi Yuk!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html"><img src="images/logo.svg" alt=""><span>Literasi Yuk!</span></a>
+    <div class="side-label">MENU UTAMA</div>
+    <nav class="side-nav">
+      <a href="dashboard.html"><span class="nav-icon">▦</span>Dashboard</a>
+      <a class="active" href="stok.html"><span class="nav-icon">▤</span>Katalog & Stok</a>
+      <a href="checkout.html"><span class="nav-icon">🛒</span>Checkout</a>
+      <a href="tracking.html"><span class="nav-icon">◎</span>Tracking Pesanan</a>
+    </nav>
+    <div class="sidebar-bottom"><button class="nav-logout" id="logoutLink"><span class="nav-icon">↪</span>Keluar</button></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar"><div><span class="eyebrow">INVENTARIS TOKO</span><h1>Katalog & Stok</h1></div><div class="profile-chip"><div class="avatar" id="avatarInitial">A</div><div><strong id="namaPengguna">Pengguna</strong><small id="emailPengguna">Email</small></div></div></header>
+
+    <section class="page-intro"><div><h2>Kelola koleksi buku</h2><p>Atur informasi buku dan pantau persediaan toko.</p></div><div class="search-box"><span>⌕</span><input type="search" id="pencarian" placeholder="Cari judul, penulis, kategori..."></div></section>
+
+    <section class="mini-stats">
+      <article class="mini-stat"><span>Total judul</span><strong id="totalBuku">5</strong></article>
+      <article class="mini-stat"><span>Total stok</span><strong id="totalStok">38</strong></article>
+      <article class="mini-stat"><span>Stok habis</span><strong id="bukuHabis">0</strong></article>
+    </section>
+
+    <section class="panel add-panel">
+      <div class="panel-heading"><div><span class="eyebrow">FORM INVENTARIS</span><h3>Tambah buku baru</h3></div></div>
+      <form id="formBuku" class="book-form">
+        <div><label for="judul">Judul buku</label><input id="judul" type="text" placeholder="Judul buku" required></div>
+        <div><label for="penulis">Penulis</label><input id="penulis" type="text" placeholder="Nama penulis" required></div>
+        <div><label for="kategori">Kategori</label><select id="kategori" required><option value="">Pilih kategori</option><option>Novel</option><option>Fantasi</option><option>Pengembangan Diri</option><option>Pendidikan</option><option>Sejarah</option><option>Lainnya</option></select></div>
+        <div><label for="harga">Harga (Rp)</label><input id="harga" type="number" min="1" placeholder="85000" required></div>
+        <div><label for="stok">Jumlah stok</label><input id="stok" type="number" min="0" placeholder="10" required></div>
+        <div class="wide-field"><label for="gambar">URL gambar cover</label><input id="gambar" type="url" placeholder="https://alamat-gambar-cover.jpg" required></div>
+        <button class="btn btn-primary" type="submit">+ Tambahkan buku</button>
+      </form>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="panel-heading"><div><span class="eyebrow">DAFTAR KOLEKSI</span><h3>Data buku</h3></div><span class="table-hint">Data contoh untuk simulasi UTS</span></div>
+      <div class="table-wrap"><table><thead><tr><th>Cover</th><th>Judul Buku</th><th>Penulis</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="tabelBuku"></tbody></table></div>
+    </section>
+    <footer class="footer-note">© 2026 Literasi Yuk! — Buka Buku, Buka Dunia.</footer>
+  </main>
+</div>
+<script src="js/data.js"></script><script src="js/toast.js"></script><script src="js/stok.js"></script><script src="js/dashboard.js"></script>
+</body>
+</html>
